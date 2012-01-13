@@ -6,7 +6,7 @@ gem 'sqlite3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'heroku'
 gem 'json'
 
 
@@ -31,6 +31,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+
+
+
+
+
+
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
