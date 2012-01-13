@@ -1,5 +1,7 @@
 Webapp::Application.routes.draw do
 
+  
+
   root :to => 'pages#home'
   
   match '/contact', :to => 'pages#contact'
@@ -10,10 +12,10 @@ Webapp::Application.routes.draw do
 
   match '/findus',    :to => 'pages#findus'
 
+  match '/signup',    :to => 'users#new'
 
 
-
-
+  get "users/new"
 
   get "pages/home"
 

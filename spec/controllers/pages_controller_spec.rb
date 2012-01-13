@@ -4,9 +4,7 @@ describe PagesController do
   render_views
   
   before(:each) do
-      #
-      # Define @base_title here.
-      #
+      @base_title = "Discover Box Hills"
     end
 
   describe "GET 'home'" do
@@ -82,4 +80,5 @@ describe PagesController do
         end
   end
 
+  
 end
