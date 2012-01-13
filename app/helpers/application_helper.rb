@@ -9,4 +9,8 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
+  
+  def logo
+      image_tag("fobh3.png", :alt => "FOBH")
+  end 
 end
