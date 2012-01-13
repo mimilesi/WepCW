@@ -37,6 +37,8 @@
 
 <%= render 'layouts/footer-content'%>
 <%= render 'layouts/footer'%>
+
+<%= debug(params) if Rails.env.development? %>
 <!-- end #footer -->
 </body>
 </html>

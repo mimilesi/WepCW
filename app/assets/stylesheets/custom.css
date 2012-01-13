@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #F7F7F7 url(img01.jpg); 
-	background-repeat: repeat-x; 
+	background-repeat: repeat; 
 	background-position: left top;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 14px;
