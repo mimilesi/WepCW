@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= csrf_meta_tags %>
+    <%# stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%# stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+	<%# stylesheet_link_tag 'earthlingtwo/style', :media => 'screen'%>
+	 <%= stylesheet_link_tag "application" %>
+	 <%= javascript_include_tag "application" %>
+</head>
+
+
+<body>
+	<div id="wrapper">
+		<ul id="tagline">
+			<h1> Welcome to Friends of Box Hills </h1>
+		</ul>	
+		
+		
+      <header>
+		<div id ="header">
+			<div id="logo">
+			
+        		<%= image_tag("fobh3.png", :alt => "FOBH", :class => "round") %>
+				<%= image_tag("fobh2.png", :alt => "FOBH", :class => "round") %>
+			</div>
+		</div>	
+        
+      </header>
+	<div id="menu">
+        <ul>
+          <li class="current_page_item"><%= link_to "Home", '#' %></li>
+          <li><%= link_to "Find Us", '#' %></li>
+          <li><%= link_to "Events", '#' %></li>
+          <li><%= link_to "About", '#' %></li>
+		  <li><%= link_to "Contact", '#' %></li>
+          <li><%= link_to "Sign in", '#' %></li>
+        </ul>
+      </div> <%# end of menu%>
+	<div id="page">
+		<div id="content">
+ 			<section >
+
+				<%= yield %>	
+	        </section>
+		</div><%#end of content%>
+		
+		
+	</div> <%#end of page%>
+
+</div> <%# end of wrapper %>			
+
+
+<div id="footer-content">
+
+	<div class="column1">
+		<h2> Addres goes here</h2>
+	</div>
+	<div class="column2">
+		<ul class="list">
+			<li><a href="#">Book Database</a></li>
+			<li><a href="#">Donate</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="footer">
+	<p> (c) 2012 Sitename.com. Design by Milesi Maria Ioanna and <a href="http://ruby.railstutorial.org/">Ruby on Rails</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
