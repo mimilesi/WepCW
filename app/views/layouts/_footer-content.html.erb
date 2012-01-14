@@ -7,6 +7,9 @@
 		<ul class="list">
 			<li><a href="#">Book Database</a></li>
 			<li><a href="#">Donate</a></li>
+			<% if signed_in? %>
+			 <li><%= link_to "Users", users_path %></li>
+			<% end %>
 		</ul>
 	</div>
 </div>
