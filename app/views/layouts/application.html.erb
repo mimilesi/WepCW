@@ -24,6 +24,9 @@
 		<div id="content">
 		<div class="textarea">	
  			<p >
+				<% flash.each do |key, value| %>
+				          <div class="flash <%= key %>"><%= value %></div>
+				 <% end %>
 				<%= yield %>	
 	        </p>
 		</div><%# end of text box %>
