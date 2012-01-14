@@ -19,7 +19,7 @@
 
 class User < ActiveRecord::Base
   
-  attr_accessor   :password, :password_confirmation
+  attr_accessor   :password
   attr_accessible :name, :email, :password, :password_confirmation
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -37,25 +37,34 @@ class User < ActiveRecord::Base
   
    before_save :encrypt_password
    
+   def password_matches?(submitted_password)
+     encrypted_password == encrypt(submitted_password)
+   end
+   
    # Return true if the user's password matches the submitted password.
    def has_password?(submitted_password)
      encrypted_password == encrypt(submitted_password)
    end
    
    def self.authenticate(email, submitted_password)
-       user = find_by_email(email)
-       return nil  if user.nil?
-       return user if user.has_password?(submitted_password)
-     end
+     user = find_by_email(email)
+     (user && user.password_matches?(submitted_password)) ? user : nil 
+   end
+
+   def self.authenticate_with_salt(id, cookie_salt)
+     user = find_by_id(id)
+     (user && user.salt == cookie_salt) ? user : nil
+   end
      
    private
 
       def encrypt_password
+        self.salt = make_salt unless password_matches?(password)
         self.encrypted_password = encrypt(password)
       end
 
       def encrypt(string)
-        string # Only a temporary implementation!
+        secure_hash("#{salt}--#{string}")
       end
       
       def make_salt
@@ -65,7 +74,5 @@ class User < ActiveRecord::Base
       def secure_hash(string)
         Digest::SHA2.hexdigest(string)
       end   
-   
-   
                     
 end

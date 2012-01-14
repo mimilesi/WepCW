@@ -1,6 +1,9 @@
 Webapp::Application.routes.draw do
 
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  resources :users
   
   
 
@@ -15,7 +18,19 @@ Webapp::Application.routes.draw do
   match '/findus',    :to => 'pages#findus'
 
   match '/signup',    :to => 'users#new'
+  
+  match '/signin',  :to => 'sessions#new'
+  
+  match '/signout', :to => 'sessions#destroy'
+  
+  
+  
+  
+  
+  
+  
 
+  get "sessions/new"
 
   get "users/new"
 
