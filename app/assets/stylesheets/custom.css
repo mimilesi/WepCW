@@ -10,7 +10,7 @@ body {
 }
 
 h1, h2, h3 {
-	margin: 0;
+	margin: 1;
 	padding: 0;
 	font-weight: normal;
 	color: #32639A;
@@ -19,6 +19,7 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 2em;
+	
 }
 
 h2 {
@@ -101,7 +102,7 @@ h2 a {
 #wrapper {
 	margin: 0px;
 	padding: 0px;
-	background: url(img02.jpg);repeat-x left top
+	background: url(img02.jpg); 
 	background-repeat: repeat-x;
 	background-position: left top;
 } 
@@ -160,13 +161,13 @@ h2 a {
 	float: left;
 }
 
-#menu a {
+#menu ul li a {
 	display: block;
 	width: 120px;
 	height: 39px;
 	margin-left: 10px;
 	padding-top: 15px;
-	background: url(img05.jpg); 
+	background: none; 
 	background-repeat:repeat-x;
 	background-position: left top;
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -178,11 +179,12 @@ h2 a {
 	border: none;
 }
 
-#menu a:hover, #menu .current_page_item a {
+#menu ul li a:hover, #menu li.current_page_item a {
 	text-decoration: none;
 }
 
-#menu .current_page_item a {
+
+#menu li.current_page_item a {
 	background: url(img06.jpg);
 	background-repeat: no-repeat;
 	background-position:left top;
@@ -196,6 +198,7 @@ h2 a {
 
 #page {
 	width: 900px;
+	height: 700px;
 	margin: 0px auto;
 	padding: 40px 50px 0px 50px;
 	background: #FFFFFF;
@@ -213,13 +216,15 @@ h2 a {
 }
 
 a.signup_button {
-  margin-left: auto;
+  margin-left: 80px;
   margin-right: auto;
+  margin-top: 300px;
   display: block;
   text-align: center;
-  width: 190px;
+  width: 180px;
   color: #fff;
-  background: #006400;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#99CF00), to(#6DB700));
+  background: -moz-linear-gradient(19% 75% 90deg,#6DB700, #99CF00);
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
@@ -308,6 +313,7 @@ a.signup_button {
 
 /**************************************************************************/
 
+/*User profile page */
 table.profile {
   width: 100%;
   margin-bottom: 0;
@@ -332,11 +338,92 @@ td.sidebar {
 
 
 
+/**************************************************************************/
+
+
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+
 
 
 /**************************************************************************/
+
+/*Sign up form */
+
+.field_with_errors {
+  margin-top: 12px;
+  padding: 2px;
+  background-color: #006600;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 3px solid #006600;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  -moz-border-radius:    5px;
+  -webkit-border-radius: 5px;
+  border-radius:         5px;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #B2D1B2;
+  color: #006600;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
 /**************************************************************************/
-/**************************************************************************/
+
+/* Text Box */
+.textarea {
+	position:absolute;
+	left:280px;
+	top:380px;
+	width:700px;
+	height:600px;
+	margin-right: auto;
+	overflow: auto;
+	visibility: visible;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
 /**************************************************************************/
 /**************************************************************************/
 /**************************************************************************/

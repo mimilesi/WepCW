@@ -25,5 +25,7 @@ class PagesController < ApplicationController
     @title = "Find Us"
     
   end
+  
+  
 
 end

@@ -48,6 +48,7 @@ describe "LayoutLinks" do
     click_link "Find Us"
     response.should have_selector('title', :content => "Find Us")
     response.should have_selector('a[href="/"]>img')
+  
   end
   
 end
